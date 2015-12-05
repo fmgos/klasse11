@@ -1,5 +1,8 @@
 package de.fmg.baum;
 
+
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import de.fmg.datenelement.v2.*;
@@ -44,6 +47,7 @@ public class Baumaufbau extends junit.framework.TestCase
         baum = new Baum(knoten18);
         baum.suchen(new Zahldaten(12));
         baum.suchen(new Zahldaten(29));
+    
     }
 
     /**
@@ -58,7 +62,7 @@ public class Baumaufbau extends junit.framework.TestCase
     @Test
     public void testTestSuchen()
     {
-        assertNotNull(Baum.suchen(new Zahldaten(12)));
-        assertNull(Baum.suchen(new Zahldaten(32)));
+        assertNotNull(baum.suchen(new Zahldaten(12)));
+        assertNull(baum.suchen(new Zahldaten(32)));
     }
 }
